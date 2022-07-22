@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: "DotGothic16", sans-serif;
-  background-image: url(../public/dark.jpeg);
+  background-image: url(../public/darktest.webp);
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -124,8 +124,9 @@ button:hover {
   background-color: #9bbc0f;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body {
+    background-image: url(/public/dark.jpeg);
     color: white;
   }
   .gen-buttons button {
