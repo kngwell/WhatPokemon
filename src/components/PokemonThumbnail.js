@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import Description from "./Description";
 
-const PokemonThumbnail = ({
-  id,
-  name,
-  image,
-  type,
-  height,
-  weight,
-  generation,
-}) => {
-  const style = `thumb-container ${type}`;
+const PokemonThumbnail = ({ id, name, image, type, height, weight }) => {
+  const style = `poke-thumbnails`;
   const [show, setShow] = useState(false);
   return (
     <div className={style}>
@@ -22,14 +14,10 @@ const PokemonThumbnail = ({
         <h3>{name.toUpperCase()}</h3>
         <small>Type : {type}</small>
         <button className="pokeinfo" onClick={() => setShow(!show)}>
-          {show === true ? "Know less..." : "Know more..."}
+          {show === true ? "About" : "About"}
         </button>
         {show === true ? (
-          <Description
-            weightpok={weight}
-            heightpok={height}
-            pokgen={generation}
-          />
+          <Description weightpok={weight} heightpok={height} />
         ) : (
           <></>
         )}

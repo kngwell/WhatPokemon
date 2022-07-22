@@ -13,6 +13,7 @@ body {
 .light-mode {
   background-image: url(../public/light.jpeg);
   background-size: cover;
+  color: black;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -33,7 +34,7 @@ code {
 }
 
 .app-container h1 {
-  color: black;
+  color: white;
   text-align: center;
 }
 
@@ -51,7 +52,7 @@ code {
   justify-content: center;
 }
 
-.thumb-container {
+.poke-thumbnails {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,23 +63,24 @@ code {
   border-style: double;
   min-width: 160px;
   text-align: center;
+  color: white;
 }
 
 h3 {
   margin-bottom: 0.2rem;
 }
 
-.thumb-container .number {
+.poke-thumbnails .number {
   padding: 0.2rem 0.4rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
 }
 
-.thumb-container img {
+.poke-thumbnails img {
   width: 120px;
   height: 120px;
 }
 
-.thumb-container small {
+.poke-thumbnails small {
   text-transform: capitalize;
 }
 
@@ -89,24 +91,23 @@ h3 {
 }
 
 .detail-wrapper button {
-  color: rgb(22, 22, 22);
+  color: white;
   padding: 0.5rem;
   margin-top: 1rem;
   border: 2px solid #9bbc0f;
   border-style: double;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.185);
+  background-color: transparent;
 }
 
-.load-more {
+.gen-buttons button {
   font-family: "DotGothic16", sans-serif;
   background-color: transparent;
   border: 2px solid #9bbc0f;
   border-style: double;
-  color: black;
-  padding: 0.5rem 1.5rem;
+  color: white;
+  padding: 0.5rem 0.5rem;
   min-width: 20%;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 button:hover {
@@ -121,4 +122,15 @@ button:hover {
 
 .pokeinfo:hover {
   background-color: #9bbc0f;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    color: white;
+  }
+  .gen-buttons button {
+    background-color: black;
+    color: white;
+    display: flex;
+  }
 }

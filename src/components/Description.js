@@ -1,18 +1,14 @@
 import React from "react";
 
-const Description = ({ heightpok, weightpok, pokgen }) => {
+const Description = ({ heightpok, weightpok }) => {
   return (
     <div className="desc">
       <p>
-        <b>Height</b> is <b>{heightpok * 10} cm.</b>
+        <b>Height:</b> <b>{heightpok * 10} in</b>
       </p>
 
       <p>
-        <b>Weight</b> is <b>{weightpok * 0.1} kg</b>
-      </p>
-
-      <p>
-        <b>Generation : {pokgen}</b>
+        <b>Weight:</b> <b>{weightpok * 0.1} lbs</b>
       </p>
     </div>
   );
